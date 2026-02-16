@@ -1,9 +1,9 @@
 ---
-name: harmonyos-dev
-description: Initialize HarmonyOS project templates (Standard ArkTS or Native C++) and perform initial build verification.
+name: harmonyos-dev-pro
+description: Professional HarmonyOS project scaffolding and environment verification. Initialize Standard ArkTS or Native C++ templates.
 ---
 
-# HarmonyOS Development Skill (Template Initialization)
+# HarmonyOS Development Skill (Pro Template Initialization)
 
 ## Directives
 - **Single Purpose:** This skill is strictly for project scaffolding and initial build verification.

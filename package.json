@@ -1,0 +1,20 @@
+{
+  "name": "harmonyos-dev-skill",
+  "version": "1.0.0",
+  "description": "Initialize HarmonyOS project templates (Standard ArkTS or Native C++) and perform initial build verification.",
+  "keywords": [
+    "harmonyos",
+    "arkts",
+    "agent-skills",
+    "ai-skills",
+    "gemini-skills",
+    "claude-skills",
+    "scaffolding"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imansmallapple/Harmonyos-dev-skill.git"
+  },
+  "author": "imansmallapple",
+  "license": "MIT"
+}
