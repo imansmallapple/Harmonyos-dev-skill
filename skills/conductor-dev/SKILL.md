@@ -1,9 +1,9 @@
 ---
-name: conductor-dev-pro
-description: Professional project orchestration and workflow management. Initialize the Conductor directory to manage tracks, specifications, and implementation plans.
+name: conductor-dev
+description: Initialize the Conductor directory for project orchestration. Use when starting a new project or adding Conductor-based workflow management to an existing repository.
 ---
 
-# Conductor Dev Pro
+# Conductor Dev
 
 ## Overview
 

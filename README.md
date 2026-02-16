@@ -4,8 +4,8 @@ A collection of professional AI agent skills designed to enhance development wor
 
 ## 🚀 Available Skills
 
-### 1. [HarmonyOS Dev Pro](./skills/harmonyos-dev-pro)
-Professional HarmonyOS project scaffolding and environment verification. Supports Standard ArkTS and Native C++ templates targeting API 20.
+### 1. [HarmonyOS Dev](./skills/harmonyos-dev)
+Initialize HarmonyOS project templates (Standard ArkTS or Native C++) and perform initial build verification. Supports Standard ArkTS and Native C++ templates targeting API 20.
 
 ### 2. [Conductor Dev](./skills/conductor-dev)
 Initialize the Conductor directory for project orchestration. Use when starting a new project or adding Conductor-based workflow management to an existing repository.
@@ -23,7 +23,7 @@ npx skills add imansmallapple/agent-skills
 
 ### Install a specific skill
 ```bash
-npx skills add imansmallapple/agent-skills@harmonyos-dev-pro
+npx skills add imansmallapple/agent-skills@harmonyos-dev
 npx skills add imansmallapple/agent-skills@conductor-dev
 ```
 
