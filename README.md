@@ -83,7 +83,21 @@ Before installing, make sure these tools are available on your `PATH`:
 
 ## Installation
 
-### Option A — Clone into your agent's skills directory (recommended)
+### Option A — Use the Skills CLI (Recommended & Easiest)
+
+The fastest way to install this skill into your agent (Gemini CLI, etc.) is via the `skills` CLI:
+
+```bash
+npx skills add imansmallapple/Harmonyos-dev-skill
+```
+
+To see what's available in the repository before installing:
+
+```bash
+npx skills add imansmallapple/Harmonyos-dev-skill --list
+```
+
+### Option B — Clone into your agent's skills directory
 
 Clone into the skills/instructions directory used by your AI agent:
 
