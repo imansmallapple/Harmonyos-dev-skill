@@ -24,22 +24,25 @@ Scaffolds the `conductor/` directory in the current project.
 ### 2. Cycle Workflow (V4 Supercharged)
 Executes a structured task cycle defined in `conductor/workflows/cycle.md`.
 - **Key Files:** `TASKS.md`, `SESSION_STATE.json` (runtime), `artifacts/logs/`
-- **Steps:** Initialization -> Analysis -> Execution -> Self-Review -> Synchronization -> Handover.
+- **Design Context:** Use the **Figma Extension** to inspect designs and extract CSS/ArkTS styling before implementation.
+- **Steps:** Initialization -> Design Analysis (Figma) -> Strategy -> Execution -> Self-Review -> Synchronization -> Handover.
 
 ## Implementation Directives
 
 When implementing tracks or tasks under Conductor:
 
-1. **Dynamic Path Resolution:** ALWAYS resolve template paths relative to the skill's root directory.
-2. **Lint Before Commit:** Execute `codelinter` on all modified files immediately after editing.
-3. **Task Verification:** 
+1. **Design-First implementation:** For all UI tasks, you MUST use the `figma` extension to fetch and analyze the relevant design files. Extract precise values for dimensions, colors, and typography to ensure pixel-perfect implementation.
+2. **Dynamic Path Resolution:** ALWAYS resolve template paths relative to the skill's root directory.
+3. **Lint Before Commit:** Execute `codelinter` on all modified files immediately after editing.
+4. **Task Verification:** 
     - For logic changes, rely primarily on `codelinter` to save tokens.
     - **UI Validation (MANDATORY):** For any UI modification, you MUST:
         1. Ensure a device/emulator is connected via `hdc list targets`.
         2. Ensure the `artifacts/snapshots/` directory exists.
         3. Execute `hdc shell snapshot_display /data/local/tmp/snapshot.png` to capture the screen.
         4. Pull the screenshot using `hdc file recv /data/local/tmp/snapshot.png "artifacts/snapshots/[task_id].png"`.
-        5. (Optional but recommended) If the track specifies automated tests, run them (e.g., `hvigorw test`) and capture the final state or results as an additional snapshot.
+        5. **Visual Comparison:** Compare the captured snapshot against the Figma design. Note any discrepancies in the `learning.md` or log.
+        6. (Optional but recommended) If the track specifies automated tests, run them (e.g., `hvigorw test`) and capture the final state or results as an additional snapshot.
 4. **Visual Proof:** Save all UI validation snapshots to `artifacts/snapshots/[task_id].png` or `artifacts/snapshots/[task_id]_test.png`.
 5. **Idempotent Edits:** Before using the `replace` tool, you MUST use `read_file` to verify the current content. Ensure that `new_string` is DIFFERENT from the existing text to avoid "No changes to apply" errors.
 6. **Automated Self-Learning Loop:** 
